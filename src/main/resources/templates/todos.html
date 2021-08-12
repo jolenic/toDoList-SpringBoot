@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo's</title>
+</head>
+<body>
+<h1>Hello!</h1>
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Done?</th>
+    </tr>
+    <tr th:each="toDo : ${toDos}">
+        <td th:text="${toDo.title}">title</td>
+        <td th:text="${toDo.done}">done?</td>
+    </tr>
+</table>
+</body>
+</html>
